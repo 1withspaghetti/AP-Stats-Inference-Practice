@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ProcedureSelection from './components/ProcedureSelection';
 import { procedureTypes } from './data';
+import Question from './components/Question';
 
 function App() {
 
@@ -18,7 +19,10 @@ function App() {
           setHasSelected={setHasSelected}
         />
       ) : (
-        ""
+        <Question
+          selected={selected}
+          setHasSelected={setHasSelected}
+        />
       )}
     </div>
   )

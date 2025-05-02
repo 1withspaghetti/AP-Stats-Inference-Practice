@@ -12,11 +12,15 @@ export const ProcedureSelection: React.FC<ProcedureSelectionProps> = ({ selected
 
     function handleSubmit(event: React.FormEvent) {
         event.preventDefault();
+        if (selected.length <= 1) {
+            alert("Please select at least two procedures to study with.");
+            return;
+        }
         setHasSelected(true);
     }
 
     return (
-        <form className="flex flex-col items-center gap-4" onSubmit={handleSubmit}>
+        <form className="flex flex-col items-center gap-4 max-w-2xl" onSubmit={handleSubmit}>
             <div className="text-xl">Select procedures to study with:</div>
             <div className="flex flex-col">
                 {procedureTypes.map((item) => 

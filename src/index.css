@@ -6,9 +6,47 @@
 }
 
 .btn.primary {
-    @apply bg-blue-500 text-white hover:bg-blue-700;
+  @apply bg-blue-500 text-white hover:bg-blue-700;
 }
 
 .btn.secondary {
-    @apply bg-gray-400 text-white hover:bg-gray-500;
+  @apply bg-gray-400 text-white hover:bg-gray-500;
+}
+
+.pop {
+  animation: pop 0.5s ease-in-out both;
+  transform: scale(0);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  
+  50% {
+    transform: scale(1.05);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}
+
+.shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+  20%, 80% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(-2px, 0, 0);
+  }
 }
