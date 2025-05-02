@@ -24,6 +24,11 @@ function App() {
           setHasSelected={setHasSelected}
         />
       )}
+      <div className="mt-16">
+        <p className='text-sm text-gray-500'>
+          Made by Tyler Place. <a href="https://github.com/1withspaghetti/AP-Stats-Inference-Practice" className='underline'>Github</a>
+        </p>
+      </div>
     </div>
   )
 }
